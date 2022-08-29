@@ -9,6 +9,8 @@ html,body{
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 p,
@@ -25,9 +27,16 @@ a{
     text-decoration: none !important;
 }
 
+li,
+ol,
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 
-
+/*========== HEADER START ========= */
 .sub__header{
     background-color: #FF7E00;
 }
@@ -199,3 +208,73 @@ a{
     border: 1px solid #FF7E00 !important;
     outline: 0;
 }
+
+
+/*========== HEADER END ========= */
+
+
+
+/*========== BANNER START ========= */
+
+.banner{
+    background-image: url("../src/img/stats/banner_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 0;
+} 
+
+.banner__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px 0;
+}
+
+.banner__information h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+}
+
+.banner__ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner__i{
+    color: #FFFFFF;
+    width: 40px;
+    display: flex;
+    padding: 11px 12px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.banner__p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF; 
+}
+
+.banner__ul li{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 20px   ;
+}
+
+
+/*========== BANNER END ========= */

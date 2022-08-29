@@ -1,4 +1,4 @@
-import logo from "../images/stats/logo.png";
+import logo from "../img/stats/logo.png";
 
 
 function Header() {
@@ -9,7 +9,7 @@ function Header() {
         <div className="sub__header">
           <div className="container">
             <div className="sub__header_inner row">
-              <nav className="navbar navbar-expand-lg col-8">
+              <nav className="navbar navbar-expand-lg col-xxl-8">
                 <div className="container-fluid">
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav sub__header_ul">
@@ -42,7 +42,7 @@ function Header() {
                 </div>
               </nav>
 
-              <div className="social col-4">
+              <div className="social col-xxl-4">
                 <a href="#!">
                  <i class="fa-brands fa-telegram social__icons"></i>
                 </a>
