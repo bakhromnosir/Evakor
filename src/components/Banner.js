@@ -80,7 +80,10 @@ function Banner() {
                         </div>
 
                         <div className="banner__img col-xxl-6">
-                            <img src={BannerImg} alt="Banner" />
+                            <div className="banner__img_inner">
+                                <img src={BannerImg} alt="Banner" />
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
