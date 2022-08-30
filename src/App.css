@@ -270,10 +270,11 @@ ul{
 }
 
 .banner__ul li{
+    width: 100%;
     display: flex;
-    justify-content: center ;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px   ;
+    gap: 20px;
 }
 
 
