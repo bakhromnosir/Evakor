@@ -1,7 +1,19 @@
+import React, { useState, useEffect } from 'react';
 import {Link} from "react-router-dom"
-
+import aboutimg from "../img/stats/banner_layer.png"
+import aboutimg2 from "../img/stats/image 52.png"
+import aboutimg3 from "../img/stats/about_girl.png"
 
 function About() {
+
+
+    const [aboutinfo, setAboutinfo] = useState([]);
+
+    useEffect(() => {
+        fetch("https://mproweb.uz/YTless/evacore/api/?page=home")
+            .then(result => result.json())
+            .then(result => setAboutinfo(result.res.data.branches))
+    }, [])
 
     return(
         <section className="about">
@@ -14,8 +26,36 @@ function About() {
                         <h4 className="where__now">О продукции</h4>
                     </div>
 
+                    <div className="why__evakor">
 
+                        <h2 className='pages__title'>Почему Evakor?</h2>
+                        
+                        <div className="why__evakor__inner">
+                            <div className="about__img">
+                                <img src={aboutimg2} alt="" />
+                            </div>
+                            <div className="about__img">
+                                <img src={aboutimg} alt="" />
+                            </div>
+                            <div className="about__img about__img3">
+                                <img src={aboutimg3} alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                   <div className="why__evakor_info">
+                    <ul className="about__ul">
+                        {aboutinfo.map(item => (
+                            <li>
+                                <p>{item.name}</p>
+                            </li>
+                        ))}
+                    </ul>
+                   </div>
                     
+
+
 
                 </div>
             </div>
