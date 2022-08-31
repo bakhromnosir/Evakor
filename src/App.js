@@ -1,13 +1,18 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Banner from "./components/Banner"
-import Comments from "./components/Comments";
+import { Routes, Route } from "react-router-dom"
+import Home from "./Pages/Home";
+import InfoEvakor from "./Pages/InfoEvakor";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Banner />
-      <Comments />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<InfoEvakor />} />
+          </Routes>
+      <Footer />
     </div>
   );
 }

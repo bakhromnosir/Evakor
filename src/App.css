@@ -1,14 +1,17 @@
 html,body{
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul{
     padding: 0;
     margin: 0;
 }
@@ -27,16 +30,9 @@ a{
     text-decoration: none !important;
 }
 
-li,
-ol,
-ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
+/* ============= HEADER START ========== */
 
-/*========== HEADER START ========= */
 .sub__header{
     background-color: #FF7E00;
 }
@@ -210,9 +206,7 @@ ul{
 }
 
 
-/*========== HEADER END ========= */
-
-
+/* ============= HEADER END ========== */
 
 /*========== BANNER START ========= */
 
@@ -277,15 +271,195 @@ ul{
     gap: 20px;
 }
 
-.banner__img_inner{
-    width: 100%;
+
+/*========== BANNER END ========= */
+
+
+
+/* ================ MENU START ================= */
+
+menu {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.pages__title{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.pages__title::before{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #FF7E00;
+    border-radius: 25px;
+    margin: auto;
 }
 
-.banner__img_inner img{
+menu .img1, 
+menu .img2,
+menu .img{
     width: 100%;
+    height: auto;
+}
+menu .img2{
+    margin-bottom: 30px;
+}
+menu .menu_link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+menu .menu_link::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FF7E00;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -2px;
+}
+menu .menu_link i{
+    margin-left: 10px;
+}
+menu .menu_bottom{
+    background: #FF7E00;
+    margin-top: 100px;
+}
+menu .menu_bottom .block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+menu .menu_bottom .block i{
+    color: #FFFFFF;
+    font-size: 27px;
+}
+menu .menu_bottom .block .right{
+    margin-left: 20px;
+}
+menu .menu_bottom .block .right p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0;
+}
+menu .menu_bottom .block .right span{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
 }
 
-/* ========== BANNER END ========= */
+
+/* ================ MENU END ================= */
+
+
+
+
+
+/* ================ class BRAND START ================= */
+
+.brands {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.brands h2{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.brands h2::before{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #FF7E00;
+    border-radius: 25px;
+    margin: auto;
+}
+.brands .block {
+    border: 1px solid #CFCFCF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    height: 190px;
+    margin-bottom: 30px;
+    padding-top: 25px;
+    transition: 500ms;
+}
+.brands .block:hover{
+    border: 1px solid #FF7E00;
+}
+.brands .block p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.brands .block p::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #FF7E00;
+    border-radius: 25px;
+    margin: 20px auto 10px;
+}
+.brands .brands_link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 15px;
+    margin-right: 40px;
+    position: relative;
+}
+.brands .brands_link::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FF7E00;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -2px;
+}
+.brands .brands_link i{
+    margin-left: 10px;
+}
+
+
+
+/* ================ class BRAND END ================= */
+
 
 /* =========== COMMENTS START ========= */
 
@@ -386,3 +560,241 @@ ul{
     width: 100% !important;
 }
 /* =========== COMMENTS END ========= */
+
+
+/* =================== MAIN START ================= */
+
+
+main h2{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+main h2::before{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #FF7E00;
+    border-radius: 25px;
+    margin: auto;
+}
+main .main_left{
+    background: url("./image/main_bg.png") no-repeat 0px 0px / cover;
+    border-radius: 10px;
+}
+main .main_left img{
+    margin-top: 40px;
+    max-width: 100%;
+    height: auto;
+}
+main form .form_title1{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 30px;
+}
+main form input{
+    padding: 12px;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #686868;
+    width: 300px;
+    margin-bottom: 20px;
+}
+main form .form_title2 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+main form .form_title2 span{
+    color: #949494;
+}
+main form button {
+    background: #FF7E00;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 10px 34px;
+    border: none;
+    margin-top: 27px;
+}
+
+/* =============== MAIN END ============ */
+
+
+
+/* =============== SECTION START ============ */
+
+section{
+    margin-top: 100px;
+}
+section h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 40px;
+}
+section h2::before{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: #FF7E00;
+    border-radius: 25px;
+    margin: auto;
+}
+section .carousel .carousel-inner .carousel-item h5{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 7px;
+}
+section .carousel .carousel-inner .carousel-item p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin: 0;
+}
+section .carousel .carousel-control-prev {
+    left: -125px;
+}
+section .carousel .carousel-control-next {
+    right: -125px;
+}
+section .carousel .carousel-control-prev .icon_left {
+    background: #FF7E00;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+section .carousel .carousel-control-next .icon_right {
+    background: #FF7E00;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+/* ================= FOOTER START =============== */
+
+footer{
+    margin-top: 40px;
+}
+footer img{
+    width: 132px;
+    height: 52px;
+}
+footer .footer_text{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8A8A8A;
+    margin: 0;
+}
+footer .footer_bottom {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    margin-top: 95px;
+    display: block;
+}
+footer .first{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    list-style: none;
+    margin-top: 12px;
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li a{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+footer .yel{
+    background: #FF7E00;
+    border-radius: 20px;
+    height: 300px;    
+}
+
+/* ================= FOOTER END =============== */
+
+
+
+/* =================  INFOEVAKOR START =============== */
+
+/* =================  ABOUT START =============== */
+
+.where{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px    ;
+}
+
+.where__main{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    transition: all 0.3s linear;
+}
+
+.where__main:hover{
+    color: #FF7E00;
+    transition: all 0.3s linear;
+}
+
+.where__icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+}
+
+.where__icon svg{
+    width: 100%;
+}
+
+.where__now{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FF7E00;
+}
+
+/* ================= ABOUT END =============== */
+
+/* =================  INFOEVAKOR END =============== */
