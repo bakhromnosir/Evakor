@@ -1,0 +1,144 @@
+@media (max-width:1024px) {
+    .comment__slider .slick-next{
+        right: 25px;
+    }
+
+    .comment__slider .slick-prev{
+        left: 25px;
+    }
+
+    section .carousel .carousel-control-next{
+        right: -25px;
+    }
+
+    section .carousel .carousel-control-prev {
+        left: -25px;
+    }
+}
+
+@media(max-width:990px){
+
+    .for__tel__logo{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5px 15px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .social {
+        align-items: flex-start;
+        padding: 19px 15px;
+    }
+
+    .header__mobile_menu{
+        border: 0;
+        height: 20px;
+        width: 30px;
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__mobile_menu:focus{
+        box-shadow: unset;
+    }
+
+    .header__mobile_menu span {
+        background-image: none;
+        height: 2px ;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .header__mobile_menu span::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;    
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .header__mobile_menu span::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;    
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .sub__header_ul{
+        margin-top: 20px;
+    }
+
+    .search__mobile__btn{
+        display: block;
+    }
+
+    .modal__search{
+        position: relative;
+        z-index: 10000;
+        background-color: #fff;
+    }
+
+    .search__mobile__btn{
+        position: unset;
+        padding: 0;
+        display: flex;
+        margin-top: 3px;
+    }
+
+    .main__header_inner .search{
+        display: none;
+    }
+
+    .header__right_side{
+        justify-content: space-between;
+        gap: 10px   ;
+    }
+
+    .profile__and_buttons{
+        gap: 10px   ;
+    }
+
+    .banner__img  img{
+        width: 100%;
+    }
+
+    .home__gallery{
+        gap: 30px   ;
+    }
+
+    .input__block form{
+        max-width: unset;
+        width: auto;
+    }
+}
+
+@media(max-width: 370px){
+    .card__inner{
+        padding: 25px 25px;
+    }
+    .dropdown__button{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .header__right_side {
+        gap: 6px    ;
+    }
+
+    .dropdown__icon{
+        right: 34%;
+    top: 118%;
+    }    
+}

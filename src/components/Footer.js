@@ -11,10 +11,14 @@ function Footer(props) {
             .then(result => setBranches(result.res.data.branches))
     }, [])
 
-    let lat = "69.3520221"
-    let lon = "41.3479613"
 
-    // const getLink = (lat, lon) => `https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11980.80829944661!2d${lat}!3d${lon}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1661857570343!5m2!1sru!2s`
+    // let ReadyBranch = branches[0]
+    function ChangeMap(filial) {
+        ReadyBranch = branches[filial.target.value] ;
+    }
+
+    
+
 
     return (
         <footer>
@@ -48,13 +52,15 @@ function Footer(props) {
                         <div className="yel">
                             <div className="row">
                                 <div className="col-xxl-6">
-                                    <select name="" id="">
+                                    <select onChange={ChangeMap} name="filial" id="filial">
                                         {branches.map((item, index) => (
-                                            <option key={index} value={index}>{item.name}</option>
+                                            <option  value={index}>{item.name}</option>
                                         ))}
                                     </select>
                                 </div>
-                                <div className="col-xxl-6"></div>
+                                <div className="col-xxl-6">
+                                    <p>{ReadyBranch.name}</p>
+                                </div>
                             </div>
                         </div>
                     </div>

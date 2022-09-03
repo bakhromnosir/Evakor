@@ -23,46 +23,69 @@ function Header() {
             <div className="sub__header">
                 <div className="container">
                     <div className="sub__header_inner row">
-                        <nav className="navbar navbar-expand-lg col-8">
-                            <div className="container-fluid">
-                                <div className="collapse navbar-collapse" id="navbarNav">
-                                    <ul className="navbar-nav sub__header_ul">
+                        <nav class="navbar navbar-expand-lg col-3 col-lg-9 col-xl-9 col-xxl-8">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler header__mobile_menu"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                    <ul class="navbar-nav sub__header_ul">
                                         <li className="nav-item">
-                                            <Link className="sub__header_li" to="/products">О продукции</Link>
+                                            <Link className="sub__header_li" to="/infoevakor">О продукции</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Автоковрики</a>
+                                            <Link className=" sub__header_li" to="/marks">Автоковрики</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Галерея</a>
+                                            <Link className=" sub__header_li" to="/galleryevakor">Галерея</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Доставка и оплата</a>
+                                            <Link className=" sub__header_li" to="/delivery">Доставка и оплата</Link>
                                         </li>
                                         <li className="nav-item">
                                             <a className=" sub__header_li" href="#">Статус заказа</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Возврат</a>
+                                            <Link className=" sub__header_li" to="/return">Возврат</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Акции</a>
+                                            <Link className=" sub__header_li" to="/Stock">Акции</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className=" sub__header_li" href="#">Контакты</a>
+                                            <Link className=" sub__header_li" to="/contact">Контакты</Link>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </nav>
 
-                        <div className="social col-4">
+                        <div className="for__tel__logo col-4 col-sm-5">
+                            <Link to="/">
+                                <img src={logo} alt="" />
+                            </Link>
+                        </div>
+
+                        <div className="social col-5 col-sm-4 col-lg-3 col-xl-3 col-xxl-4">
+                            <button type="button" class="btn btn-primary search__mobile__btn  input__btn" data-bs-toggle="modal" data-bs-target="#header__mobile_modal"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0_29_488)"><path d="M12.0207 11.0779L14.876 13.9326L13.9327 14.8759L11.078 12.0206C10.0158 12.8721 8.69467 13.3352 7.33334 13.3333C4.02134 13.3333 1.33334 10.6453 1.33334 7.33325C1.33334 4.02125 4.02134 1.33325 7.33334 1.33325C10.6453 1.33325 13.3333 4.02125 13.3333 7.33325C13.3353 8.69459 12.8722 10.0157 12.0207 11.0779ZM10.6833 10.5833C11.5294 9.71318 12.0019 8.54687 12 7.33325C12 4.75459 9.91134 2.66659 7.33334 2.66659C4.75467 2.66659 2.66667 4.75459 2.66667 7.33325C2.66667 9.91125 4.75467 11.9999 7.33334 11.9999C8.54696 12.0018 9.71326 11.5293 10.5833 10.6833L10.6833 10.5833Z" fill="white" /></g><defs><clipPath id="clip0_29_488"><rect width="16" height="16" fill="white" /></clipPath></defs></svg></button>
                             {socials.map((item, index) => (
                                 <a href={item.link} key={index}>
                                     <i className={`${item.fa_icon} social__icons`}></i>
                                 </a>
                             ))}
                         </div>
+
+                        <div class="modal fade mobile__modal"  id="header__mobile_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal__search">
+                                <div className="search">
+                                    <form className="d-flex " role="search">
+                                        <input id="header__search" className="  search__input" type="text" placeholder="Поиск по сайту" aria-label="Search" />
+                                        <button className="btn input__btn" type="submit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0_29_488)"><path d="M12.0207 11.0779L14.876 13.9326L13.9327 14.8759L11.078 12.0206C10.0158 12.8721 8.69467 13.3352 7.33334 13.3333C4.02134 13.3333 1.33334 10.6453 1.33334 7.33325C1.33334 4.02125 4.02134 1.33325 7.33334 1.33325C10.6453 1.33325 13.3333 4.02125 13.3333 7.33325C13.3353 8.69459 12.8722 10.0157 12.0207 11.0779ZM10.6833 10.5833C11.5294 9.71318 12.0019 8.54687 12 7.33325C12 4.75459 9.91134 2.66659 7.33334 2.66659C4.75467 2.66659 2.66667 4.75459 2.66667 7.33325C2.66667 9.91125 4.75467 11.9999 7.33334 11.9999C8.54696 12.0018 9.71326 11.5293 10.5833 10.6833L10.6833 10.5833Z" fill="white" /></g><defs><clipPath id="clip0_29_488"><rect width="16" height="16" fill="white" /></clipPath></defs></svg></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
                 </div>

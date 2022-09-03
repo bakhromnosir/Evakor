@@ -1,4 +1,5 @@
 import React from 'react';
+import Advantages from '../components/Advantages';
 import Banner from '../components/Banner';
 import Brands from '../components/Brands';
 import Comments from '../components/Comments';
@@ -11,6 +12,7 @@ function Home(props) {
         <div>
             <Banner />
             <Menu />
+            <Advantages />
             <Brands />
             <Comments />
             <Main />
