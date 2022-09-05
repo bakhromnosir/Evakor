@@ -4,20 +4,27 @@ import Logo from "../img/stats/logo.png"
 function Footer(props) {
 
     const [branches, setBranches] = useState([]);
+    const [Newbranches , setNewBranches] = useState([]);
 
     useEffect(() => {
         fetch("https://mproweb.uz/YTless/evacore/api/?page=home")
             .then(result => result.json())
-            .then(result => setBranches(result.res.data.branches))
+            .then(result => {
+                setBranches(result.res.data.branches)
+                setNewBranches(result.res.data.branches[0])} )
     }, [])
 
-
-    // let ReadyBranch = branches[0]
-    function ChangeMap(filial) {
-        ReadyBranch = branches[filial.target.value] ;
-    }
-
     
+    
+ 
+
+    function ChangeMap(filial) {
+        setNewBranches(branches[filial.target.value]) ;
+    }    
+
+   
+    
+
 
 
     return (
@@ -57,9 +64,13 @@ function Footer(props) {
                                             <option  value={index}>{item.name}</option>
                                         ))}
                                     </select>
+
+                                    <p>{Newbranches.name}</p>
+                                    <p>График работы с {Newbranches.work_period.start} до {Newbranches.work_period.finish}</p>
+                                    <a href={`tel:${Newbranches.phone}`} >Call - Центр: {Newbranches.phone}</a>
                                 </div>
                                 <div className="col-xxl-6">
-                                    <p>{ReadyBranch.name}</p>
+                                    <iframe src={`https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11980.80829944661!2d${Newbranches.coords.lon}!3d${Newbranches.coords.lat}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1661857570343!5m2!1sru!2s`} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +81,7 @@ function Footer(props) {
         </footer>
     );
 }
-
+   
 // branch.listen('change', e => {
 //     let selBranch = branches[branch.value]
 //     span.addres.text = selBranch.addres
