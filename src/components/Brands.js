@@ -15,8 +15,8 @@ function Brands(props) {
             <h2 className='pages__title'>Выберите марку своего автомобиля</h2>
             <div className="container">
                 <div className="row justify-content-center">
-                    {brands.map((item) => (
-                        <div className=" col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
+                    {brands.map((item , index) => (
+                        <div key={index} className=" col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
                             <div className="block">
                                 <img src={item.icon} alt="png" />
                                 <p>{item.brand_name}</p>

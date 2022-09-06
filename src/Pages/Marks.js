@@ -40,10 +40,10 @@ function Marks() {
 					))}
 				</div>
 				
-				<div className="row">
+				<div className="row justify-content-center">
 					{newBrands.map((item, index) => (
-						<div className="col-xxl-2">
-							<div key={index} className="block">
+						<div key={index} className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
+							<div  className="block">
 								<Link to={`/marks2/${item.brand_id}`}>
 									<img src={item.icon} alt="png" />
 								</Link>

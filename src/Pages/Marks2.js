@@ -44,15 +44,11 @@ function Marks2() {
 					
 				
 
-				<div className="row main__block_of_cars">
-					{/* <div  className="not__found" >
-						<h1>К сожалению в данный момент акции не проводятся</h1>
-						<img src={SadSmile} alt="" />
-					</div> */}
+				<div className="row main__block_of_cars justify-content-center">
 
-				
+				{/* col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 col-xxl-2 */}
 						{newBrandCars.map((item, index) => (
-							<div className="col-xxl-3 ">
+							<div className="col-12 col-sm-6 col-md-5 col-lg-4col-xl-3 col-xxl-3 ">
 								<div key={index} className="cars__block block">
 									<Link to="/">
 										<div className="cars__img">

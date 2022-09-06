@@ -34,7 +34,7 @@ function About() {
                             <div className="about__img">
                                 <img src={aboutimg2} alt="" />
                             </div>
-                            <div className="about__img">
+                            <div className="about__img about__img2">
                                 <img src={aboutimg} alt="" />
                             </div>
                             <div className="about__img about__img3">
