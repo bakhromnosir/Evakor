@@ -46,8 +46,8 @@ function About() {
                    
                    <div className="why__evakor_info">
                     <ul className="about__ul">
-                        {aboutinfo.map(item => (
-                            <li>
+                        {aboutinfo.map((item, index) => (
+                            <li key={index}>
                                 <p>{item.name}</p>
                             </li>
                         ))}

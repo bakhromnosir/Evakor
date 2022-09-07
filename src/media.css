@@ -189,9 +189,14 @@
     .gallery__content .slick-prev{
         left: 21%;
     }
+
+    .gird{
+        grid-gap: 15px;
+    }
 }
 
 @media(max-width: 370px){
+
     .card__inner{
         padding: 25px 25px;
     }
@@ -208,4 +213,20 @@
         right: 34%;
     top: 118%;
     }    
+
+    .list-choice-title{
+        padding-right: 0 !important;
+    }
+
+    .header__right_side .list-choice input[type="radio"]:checked + span{
+        padding-right: 15px;
+    }
+
+    .list-choice i {
+        right: 36px;
+        top: 51px;
+    }
+    .header__right_side .list-choice-objects {
+        padding-top: 64%;
+    }
 }

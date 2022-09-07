@@ -5,12 +5,17 @@ import {Link} from "react-router-dom"
 function Header() {
 
     const [branches, setBranches] = useState([])
+    const [Newbranches, setNewBranches] = useState([])
     const [socials, setSocials] = useState([])
 
     useEffect(() => {
         fetch("https://mproweb.uz/YTless/evacore/api/?page=home")
             .then(result => result.json())
-            .then(result => setBranches(result.res.data.branches))
+            .then(result => {
+                setBranches(result.res.data.branches)
+                setNewBranches(result.res.data.branches[0])
+
+            } )
 
         fetch("https://mproweb.uz/YTless/evacore/api/?page=home")
             .then(result => result.json())
@@ -110,7 +115,7 @@ function Header() {
                                 </form>
                             </div>
 
-                            <div className="dropdown">
+                            {/* <div className="dropdown">
                                 <button className="btn  dropdown-toggle dropdown__button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span>+99871 123 45 67</span>
                                     <span>Юнус-абад</span>
@@ -126,7 +131,20 @@ function Header() {
                                         <li key={index}><a className="dropdown-item" href="#"> <span>{item.name}</span> <span>{item.phone}</span> </a></li>
                                     ))}
                                 </ul>
-                            </div>
+                            </div> */}
+                                    <div className="list-choice">
+                                         <i className="dropdown__icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4916 6.15752C14.4219 6.08722 14.3389 6.03143 14.2475 5.99335C14.1561 5.95527 14.0581 5.93567 13.9591 5.93567C13.8601 5.93567 13.7621 5.95527 13.6707 5.99335C13.5793 6.03143 13.4963 6.08722 13.4266 6.15752L9.99159 9.59251C9.92187 9.66281 9.83892 9.7186 9.74752 9.75668C9.65613 9.79475 9.5581 9.81436 9.45909 9.81436C9.36008 9.81436 9.26205 9.79475 9.17066 9.75668C9.07926 9.7186 8.99631 9.66281 8.92659 9.59251L5.49159 6.15752C5.42187 6.08722 5.33892 6.03143 5.24752 5.99335C5.15613 5.95527 5.0581 5.93567 4.95909 5.93567C4.86008 5.93567 4.76205 5.95527 4.67066 5.99335C4.57926 6.03143 4.49631 6.08722 4.42659 6.15752C4.2869 6.29804 4.2085 6.48813 4.2085 6.68627C4.2085 6.88441 4.2869 7.07449 4.42659 7.21502L7.86909 10.6575C8.29097 11.0789 8.86284 11.3155 9.45909 11.3155C10.0553 11.3155 10.6272 11.0789 11.0491 10.6575L14.4916 7.21502C14.6313 7.07449 14.7097 6.88441 14.7097 6.68627C14.7097 6.48813 14.6313 6.29804 14.4916 6.15752Z" fill="white"/></svg></i>
+                                        <div className="list-choice-title"> <span>{Newbranches.name}</span> <span>{Newbranches.phone}</span>  </div>
+                                            <div className="list-choice-objects">
+                                                {branches.map((item, index) => (
+                                                    <label key={index}>
+                                                        <input  value={index} type="radio" name="month"/><span> <span>{item.name}</span> <span>{item.phone}</span> </span>
+                                                    </label>
+                                                ))}      
+                                            </div>
+                                    </div>
+
+                    
 
 
                             <div className="profile__and_buttons">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+// import UseHttpHook from '../components/UseHttpHook';
 import logosad from "../img/stats/sad__smile.png"
 
 function Marks() {
@@ -8,6 +9,7 @@ function Marks() {
 	const [newBrands, setNewBrands] = useState([]);
 	const [emptyMess, setEmptyMess] = useState();
 
+	// const {request} = UseHttpHook();
 
 	useEffect(() => {
 		fetch("https://mproweb.uz/YTless/evacore/api/?page=home")

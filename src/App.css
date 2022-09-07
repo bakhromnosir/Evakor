@@ -55,6 +55,47 @@ a{
     gap: 20px;
 }
 
+.header__right_side .list-choice{
+    width: auto;
+    padding:  5px 14px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #FF7E00;
+    align-items: center;
+    border-radius: 25px;
+    position: relative;
+}
+
+.header__right_side .list-choice-title{
+    flex-direction:column-reverse;
+    text-align: center;
+    padding-right: 28px;
+}
+
+.header__right_side .list-choice-objects{
+    padding-top: 42%;
+}
+
+.header__right_side .list-choice input[type="radio"]:checked + span{
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding-right: 45px;
+}
+
+.header__right_side .list-choice input[type="radio"] + span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.header__right_side .list-choice-title{
+    color: #000;
+    box-shadow: none;
+    text-shadow: none;
+}
+
 .sub__header_li{
     font-weight: 500;
     font-size: 12px;
@@ -94,6 +135,19 @@ a{
     justify-content: center;
     align-items: center;
     gap: 20px   ;
+}
+
+.header__right_side .list-choice i{
+    position: absolute;
+    right: 3px;
+    top: 20px;
+    padding: 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF7E00;
+    border-radius: 25px;
+    z-index: 5;
 }
 
 .logo{
@@ -774,6 +828,21 @@ footer .footer_text{
     color: #8A8A8A;
     margin: 0;
 }
+
+footer .list-choice-title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+footer .list-choice input[type="radio"] + span{
+    text-align: start;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 0;
+}
+
 footer .footer_bottom {
     font-weight: 400;
     font-size: 12px;
@@ -883,16 +952,16 @@ footer ul li a:hover{
   }
   
   .list-choice-title {
+
   width: 100%;
   display: block;
-  font-weight: 600;
-font-size: 18px;
-line-height: 22px;
-  text-align: start;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
   box-sizing: border-box;
   display: flex;
   color: #FFF;
-  text-shadow: 0 1px 0 #CACACA;
   border-radius: 0.2em;
   }
   .list-choice:hover .list-choice-title {
@@ -905,10 +974,17 @@ line-height: 22px;
   color: #000;
   background: #fff;
   display: block;
+  padding: 5px 14px;
   text-align: start;
   box-sizing: border-box;
   cursor: pointer;
+  font-weight: 400;
+font-size: 12px;
+line-height: 15px;
   width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column-reverse;
   }
   .list-choice-objects {
   position: absolute;

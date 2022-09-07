@@ -14,6 +14,8 @@ function Comments() {
             .then(result => setComments(result.res.data.comments));
     }, [])
 
+
+    // its for slider to fix console log errors
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
         <div
             {...props}
